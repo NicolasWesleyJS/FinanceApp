@@ -10,10 +10,9 @@ import Report from './pages/Report';
 
 const StackScreens = () => {
   return (
-    <Stack.Navigator 
-      initialRouteName='main'
-      screenOptions={{headerShown: false}}
-      >
+    <Stack.Navigator
+      initialRouteName="main"
+      screenOptions={{headerShown: false}}>
       <Stack.Screen name="main" component={main} />
       <Stack.Screen name="NewEntry" component={NewEntry} />
       <Stack.Screen name="Report" component={Report} />
