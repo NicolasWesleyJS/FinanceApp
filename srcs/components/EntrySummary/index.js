@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import EntrySummaryList from './EntrySummarryList'
-import EntrySummaryChart from './EntrySummaryChart'
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+import EntrySummaryList from './EntrySummarryList';
+import EntrySummaryChart from './EntrySummaryChart';
 
 export default function EntrySummary() {
   return (
@@ -9,11 +9,11 @@ export default function EntrySummary() {
       <EntrySummaryList />
       <EntrySummaryChart />
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     //flex: 1,
-  }
-})
+  },
+});
