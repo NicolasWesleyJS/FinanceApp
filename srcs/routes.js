@@ -1,9 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-
 const Stack = createStackNavigator();
-
 import main from './pages/main';
 import NewEntry from './pages/NewEntry';
 import Report from './pages/Report';
