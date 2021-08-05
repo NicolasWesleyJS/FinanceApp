@@ -7,16 +7,8 @@ import EntryList from '../../components/EntryList';
 
 import Colors from '../../styles/Colors';
 import Colors2 from '../../styles/Colors2';
-// import manager from './manager';
-import { BleManager } from 'react-native-ble-plx';
-
-var manager = new BleManager()
 
 const Main = ({navigation}) => {
-  
-  
-
-
   return (
     <View style={styles.container}>
       <BalancePanel onNewEntryPress={() => navigation.navigate('NewEntry')} />
@@ -33,7 +25,8 @@ const Main = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors2.Green1,
+    backgroundColor: Colors.background,
+    
   },
 });
 

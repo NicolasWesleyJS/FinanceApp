@@ -1,34 +1,30 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  Touchable,
-} from 'react-native';
-
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../../../styles/Colors';
 
 const Container = ({
+  children,
   title,
   actionLabelText,
   actionButtonText,
   onPressActionButton,
-  children,
 }) => {
   return (
-    <View>
+    <View style={styles.container}>
       {title && <Text style={styles.title}>{title}</Text>}
       {children}
-      
-      {(actionLabelText || actionButtonText) && (
+      {(actionButtonText || actionLabelText) && (
         <View style={styles.actionContainer}>
-          {actionLabelText && <Text>{actionLabelText}</Text>}
+          {actionLabelText && (
+            <Text style={styles.actionLabel}>{actionLabelText}</Text>
+          )}
           {actionButtonText && (
             <TouchableOpacity
               style={styles.actionButton}
               onPress={onPressActionButton}>
-              <Text style={styles.actionButtonText}></Text>
+              <Icon name="insert-chart" style={styles.actionButtonIcon} />
+              <Text style={styles.actionButtonText}>{actionButtonText}</Text>
             </TouchableOpacity>
           )}
         </View>
@@ -40,11 +36,39 @@ const Container = ({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.asphalt,
+    margin: 5,
+    padding: 8,
+    borderRadius: 10,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: Colors.borderColor,
   },
   title: {
     fontSize: 12,
+    marginBottom: 10,
     color: Colors.white,
-    marginBottom: 5,
+  },
+  actionContainer: {
+    flexDirection: 'row',
+  },
+  actionLabel: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    fontSize: 12,
+    color: Colors.white,
+  },
+  actionButtonIcon: {
+    flexDirection: 'row',
+    color: Colors.white,
+    marginTop: 3,
+    marginRight: 2,
+  },
+  actionButton: {
+    flexDirection: 'row',
+  },
+  actionButtonText: {
+    fontSize: 12,
+    color: Colors.white,
   },
 });
 

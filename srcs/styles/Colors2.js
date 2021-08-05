@@ -9,12 +9,10 @@ const Colors2 = {
   Cadet_Blue: '4d908e',
   Queen_Blue: '577590',
   CG_Blue: '#277da1',
-  
-  
+
   Blue1: '#99c1de',
   Blue2: '#bcd4e6',
-  Green1: '#bcd4e6',  
-
+  Green1: '#bcd4e6',
 };
 
 export default Colors2;

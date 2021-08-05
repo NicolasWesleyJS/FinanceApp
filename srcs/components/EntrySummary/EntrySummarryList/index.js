@@ -1,11 +1,10 @@
-import React from 'react'
-import { View, FlatList, Text, StyleSheet } from 'react-native'
+import React from 'react';
+import {View, FlatList, Text, StyleSheet} from 'react-native';
 
 export default function EntrySummaryList() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Categorias</Text>
-      <FlatList 
+      <FlatList
         data={[
           {key: 'Alimentação: $ 200,00'},
           {key: 'Transporte: $ 60,00'},
@@ -15,21 +14,13 @@ export default function EntrySummaryList() {
           {key: 'Casa: $ 158,00'},
         ]}
         renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-
-      
       />
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   conatiner: {
-  //  flex: 1,
+    //  flex: 1,
   },
-  title: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    marginTop: 10,
-    marginBottom: 10,
-  }
-})
+});

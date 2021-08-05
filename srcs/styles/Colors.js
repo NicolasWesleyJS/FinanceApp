@@ -24,6 +24,7 @@ const Colors = {
   carbon: '#555459',
   carbonDark: '#3b3a3e',
 
+  borderColor: '#3498dbaa',
   primary: '#3498db',
   secondary: '#2ecc71',
   danger: '#f37272',
